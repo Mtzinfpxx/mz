@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import path from "path";
-import { security } from "../middleware/security.js";
-import modsRoutes from "../routes/mods.js";
+import { security } from "./middleware/security.js";
+import modsRoutes from "./routes/mods.js";
 import { __dirname } from "./utils.js";
 
 const app = express();

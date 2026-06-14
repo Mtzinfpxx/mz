@@ -2,7 +2,7 @@
   "name": "mod-manager",
   "version": "1.0.0",
   "description": "Sistema futurista de gerenciamento de mods",
-  "main": "backend/src/server.ts",
+  "main": "backend/dist/server.js",
   "type": "module",
   "scripts": {
     "dev": "tsx backend/src/server.ts",
