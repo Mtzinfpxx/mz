@@ -7,8 +7,8 @@
     "lib": ["ES2020"],
     "types": ["node"],
 
-    "rootDir": "./backend/src",
-    "outDir": "./backend/dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
 
     "strict": true,
     "esModuleInterop": true,
@@ -19,6 +19,6 @@
     "sourceMap": true
   },
 
-  "include": ["backend/src/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "backend/dist"]
 }

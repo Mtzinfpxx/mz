@@ -7,13 +7,12 @@ import modsRoutes from "./routes/mods.js";
 
 /* ES Modules */
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 /* Caminho da pasta frontend */
-const FRONTEND_PATH =  "frontend";
+const FRONTEND_PATH =  path.join(process.cwd(), "frontend");
 
 console.log("📂 Frontend:", FRONTEND_PATH);
 
