@@ -1,29 +1,65 @@
 import express, { Request, Response } from "express";
 import path from "path";
+import { fileURLToPath } from "url";
+
 import { security } from "./middleware/security.js";
 import modsRoutes from "./routes/mods.js";
-import { __dirname } from "./utils.js";
+
+/* ES Modules */
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-/* 🛡️ SECURITY */
+/* Caminho da pasta frontend */
+const FRONTEND_PATH =  "frontend";
+
+console.log("📂 Frontend:", FRONTEND_PATH);
+
+/* Segurança */
 security(app);
 
-/* 📦 JSON */
+/* JSON */
 app.use(express.json());
 
-/* 🌐 FRONTEND */
-app.use(express.static(path.join(__dirname, "../frontend")));
+/* Arquivos estáticos */
+app.use(express.static(FRONTEND_PATH));
 
-/* 📡 API */
+/* API */
 app.use("/api/mods", modsRoutes);
 
-/* 🏠 HOME */
+/* Página inicial */
 app.get("/", (_req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+  res.sendFile(path.join(FRONTEND_PATH, "index.html"));
 });
 
-/* 🚀 START */
-app.listen(3000, () => {
-  console.log("🚀 Mod Manager Pro rodando em http://localhost:3000");
+/* Dashboard */
+app.get("/dashboard", (_req: Request, res: Response) => {
+  res.sendFile(path.join(FRONTEND_PATH, "dashboard.html"));
+});
+
+/* Health Check */
+app.get("/health", (_req: Request, res: Response) => {
+  res.json({
+    status: "online",
+    port: PORT
+  });
+});
+
+/* 404 */
+app.use((_req: Request, res: Response) => {
+  res.status(404).json({
+    success: false,
+    message: "Rota não encontrada"
+  });
+});
+
+/* Inicialização */
+app.listen(PORT, () => {
+  console.log("====================================");
+  console.log("🚀 Mod Manager Pro iniciado");
+  console.log(`🌐 Local: http://localhost:${PORT}`);
+  console.log(`📁 Frontend: ${FRONTEND_PATH}`);
+  console.log("====================================");
 });

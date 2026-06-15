@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Mods</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <h2>📦 Painel de Mods</h2>
+    <button onclick="logout()">Sair</button>
+  </div>
+
+  <section class="form">
+    <input id="name" placeholder="Nome do mod">
+    <input id="desc" placeholder="Descrição">
+    <input id="link" placeholder="Link de download">
+
+    <button onclick="addMod()">+ Adicionar Mod</button>
+  </section>
+
+  <section id="mods" class="grid"></section>
+
+  <script src="app.js"></script>
+</body>
+</html>
