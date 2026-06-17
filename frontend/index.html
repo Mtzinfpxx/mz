@@ -1,59 +1,493 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MZ Dashboard</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Anglo Mirante | Educação para o Futuro</title>
+
+    <meta name="description"
+        content="Educação de excelência, inovação tecnológica e desenvolvimento humano no Anglo Mirante.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        rel="stylesheet">
 </head>
+
 <body>
 
-  <div class="stars"></div>
-  <div class="glow"></div>
+    <!-- LOADER -->
 
-  <nav class="navbar">
-    <div class="logo">MZ<span>.</span></div>
-
-    <div class="nav-links">
-      <a href="#">Início</a>
-      <a href="#">Recursos</a>
-      <a href="#">Dashboard</a>
-      <a href="#">Contato</a>
+    <div id="loader">
+        <div class="loader-circle"></div>
+        <h2>ANGLO MIRANTE</h2>
     </div>
-  </nav>
 
-  <main class="hero">
-    <div class="hero-content">
+    <!-- CURSOR GLOW -->
 
-      <div class="badge">
-        🚀 Plataforma Profissional
-      </div>
+    <div class="cursor-glow"></div>
 
-      <h1>
-        Gerencie seus projetos
-        com velocidade e elegância
-      </h1>
+    <!-- PARTICLES -->
 
-      <p>
-        Uma plataforma moderna para controle, monitoramento
-        e gerenciamento de recursos com performance,
-        segurança e design premium.
-      </p>
+    <div id="particles"></div>
 
-      <div class="hero-buttons">
-        <button class="btn-primary">
-          Começar Agora
-        </button>
+    <!-- HEADER -->
 
-        <button class="btn-secondary">
-          Saiba Mais
-        </button>
-      </div>
+    <header class="header">
 
-    </div>
-  </main>
+        <div class="logo">
+
+            <img src="./assets/logo.png" alt="Anglo Mirante">
+
+            <div>
+                <h2>Anglo Mirante</h2>
+                <span>Excelência Acadêmica</span>
+            </div>
+
+        </div>
+
+        <nav class="navbar">
+
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#ensino">Ensino</a>
+            <a href="#estrutura">Estrutura</a>
+            <a href="#resultados">Resultados</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+        <div class="header-buttons">
+
+            <a href="#" class="btn-secondary">
+                Portal do Aluno
+            </a>
+
+            <a href="dashboard.html" class="btn-primary">
+                Dashboard
+            </a>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section id="inicio" class="hero">
+
+        <div class="hero-content">
+
+            <span class="hero-badge">
+                🚀 Educação + Tecnologia
+            </span>
+
+            <h1>
+                Preparando líderes para o futuro
+            </h1>
+
+            <p>
+                O Anglo Mirante une inovação, excelência acadêmica e
+                desenvolvimento humano para formar alunos preparados
+                para os desafios do século XXI.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button class="btn-primary">
+                    Conheça o Colégio
+                </button>
+
+                <button class="btn-outline">
+                    Agendar Visita
+                </button>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h2 data-counter="1250">0</h2>
+                    <span>Alunos</span>
+                </div>
+
+                <div>
+                    <h2 data-counter="98">0</h2>
+                    <span>% Aprovação</span>
+                </div>
+
+                <div>
+                    <h2 data-counter="82">0</h2>
+                    <span>Professores</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="hero-card">
+
+                <i class="fas fa-graduation-cap"></i>
+
+                <h3>Excelência Acadêmica</h3>
+
+                <p>
+                    Ensino focado em resultados e desenvolvimento integral.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE -->
+
+    <section id="sobre" class="about section">
+
+        <div class="section-title">
+
+            <span>Quem Somos</span>
+
+            <h2>Mais de 20 anos formando talentos</h2>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    O Anglo Mirante oferece uma educação moderna,
+                    conectada às necessidades do mundo atual.
+                </p>
+
+                <p>
+                    Nosso compromisso é desenvolver competências
+                    acadêmicas, emocionais e tecnológicas.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Ensino de excelência
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Professores especializados
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Tecnologia em sala
+                    </li>
+
+                    <li>
+                        <i class="fas fa-check"></i>
+                        Preparação para vestibulares
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="about-image">
+
+                <div class="glass-card">
+
+                    <i class="fas fa-school"></i>
+
+                    <h3>Campus Moderno</h3>
+
+                    <p>
+                        Infraestrutura completa para aprendizagem.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ENSINO -->
+
+    <section id="ensino" class="education section">
+
+        <div class="section-title">
+
+            <span>Ensino</span>
+
+            <h2>Níveis Educacionais</h2>
+
+        </div>
+
+        <div class="education-grid">
+
+            <div class="education-card">
+
+                <i class="fas fa-child"></i>
+
+                <h3>Ensino Fundamental</h3>
+
+                <p>
+                    Desenvolvimento de habilidades essenciais.
+                </p>
+
+            </div>
+
+            <div class="education-card">
+
+                <i class="fas fa-user-graduate"></i>
+
+                <h3>Ensino Médio</h3>
+
+                <p>
+                    Formação sólida para vestibulares e carreira.
+                </p>
+
+            </div>
+
+            <div class="education-card">
+
+                <i class="fas fa-laptop-code"></i>
+
+                <h3>Tecnologia</h3>
+
+                <p>
+                    Programação, robótica e inovação.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DIFERENCIAIS -->
+
+    <section class="features section">
+
+        <div class="section-title">
+
+            <span>Diferenciais</span>
+
+            <h2>Por que escolher o Anglo Mirante?</h2>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+                <i class="fas fa-brain"></i>
+                <h3>Metodologia Moderna</h3>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-microchip"></i>
+                <h3>Tecnologia Educacional</h3>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-trophy"></i>
+                <h3>Alta Aprovação</h3>
+            </div>
+
+            <div class="feature-card">
+                <i class="fas fa-book-open"></i>
+                <h3>Material Anglo</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RESULTADOS -->
+
+    <section id="resultados" class="results section">
+
+        <div class="section-title">
+
+            <span>Resultados</span>
+
+            <h2>Números que inspiram confiança</h2>
+
+        </div>
+
+        <div class="results-grid">
+
+            <div class="result-card">
+                <h2>98%</h2>
+                <span>Aprovação</span>
+            </div>
+
+            <div class="result-card">
+                <h2>+20</h2>
+                <span>Anos</span>
+            </div>
+
+            <div class="result-card">
+                <h2>1250</h2>
+                <span>Alunos</span>
+            </div>
+
+            <div class="result-card">
+                <h2>82</h2>
+                <span>Professores</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- DEPOIMENTOS -->
+
+    <section class="testimonials section">
+
+        <div class="section-title">
+
+            <span>Depoimentos</span>
+
+            <h2>O que dizem nossas famílias</h2>
+
+        </div>
+
+        <div class="testimonial-slider">
+
+            <div class="testimonial-card">
+                <p>
+                    "Excelente estrutura e ensino."
+                </p>
+                <h4>Família Oliveira</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "Professores extremamente preparados."
+                </p>
+                <h4>Família Santos</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>
+                    "Meu filho evoluiu muito."
+                </p>
+                <h4>Família Costa</h4>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="cta-content">
+
+            <h2>
+                Venha conhecer o Anglo Mirante
+            </h2>
+
+            <p>
+                Agende uma visita e descubra uma nova experiência educacional.
+            </p>
+
+            <button class="btn-primary">
+                Agendar Agora
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="contact section">
+
+        <div class="section-title">
+
+            <span>Contato</span>
+
+            <h2>Fale Conosco</h2>
+
+        </div>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Nome">
+
+            <input type="email" placeholder="Email">
+
+            <input type="text" placeholder="Telefone">
+
+            <textarea placeholder="Mensagem"></textarea>
+
+            <button class="btn-primary">
+                Enviar Mensagem
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h2>Anglo Mirante</h2>
+
+            <p>
+                Educação para o Futuro.
+            </p>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            © 2026 Anglo Mirante - Todos os direitos reservados.
+
+        </div>
+
+    </footer>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
+
+<div class="result-card reveal">
+  <h3 data-counter="2500">0</h3>
+  <span>Alunos Aprovados</span>
+</div>
+
+<div class="result-card reveal">
+  <h3 data-counter="98">0</h3>
+  <span>% Aprovação</span>
+</div>
+<a href="dashboard.html">📊 Dashboard</a>
+
+<a href="alunos.html">🎓 Alunos</a>
+
+<a href="cursos.html">📚 Cursos</a>
+
+<a href="professores.html">👨‍🏫 Professores</a>
+
+<a href="provas.html">📝 Provas</a>
+
+<a href="desempenho.html">🏆 Desempenho</a>
+
+<a href="mensagens.html">💬 Mensagens</a>
+
+<a href="configuracoes.html">⚙️ Configurações</a>

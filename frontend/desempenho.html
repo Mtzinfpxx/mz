@@ -1,0 +1,39 @@
+<h1>Desempenho</h1>
+
+<div class="stats-grid">
+
+    <div class="card">
+        <h2>97%</h2>
+        <p>Aprovação</p>
+    </div>
+
+    <div class="card">
+        <h2>94%</h2>
+        <p>Frequência</p>
+    </div>
+
+    <div class="card">
+        <h2>9.1</h2>
+        <p>Média Geral</p>
+    </div>
+
+</div>
+
+<div class="card">
+    <canvas id="grafico"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+new Chart(document.getElementById('grafico'),{
+    type:'line',
+    data:{
+        labels:['Jan','Fev','Mar','Abr','Mai','Jun'],
+        datasets:[{
+            label:'Desempenho',
+            data:[78,82,85,89,91,94]
+        }]
+    }
+});
+</script>

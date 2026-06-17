@@ -1,28 +1,277 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Dashboard - Mods</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anglo Mirante Dashboard</title>
+
+<link rel="stylesheet" href="dashboard.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="topbar">
-    <h2>📦 Painel de Mods</h2>
-    <button onclick="logout()">Sair</button>
-  </div>
+<div class="dashboard">
 
-  <section class="form">
-    <input id="name" placeholder="Nome do mod">
-    <input id="desc" placeholder="Descrição">
-    <input id="link" placeholder="Link de download">
+    <!-- SIDEBAR -->
 
-    <button onclick="addMod()">+ Adicionar Mod</button>
-  </section>
+    <aside class="sidebar">
 
-  <section id="mods" class="grid"></section>
+        <div class="logo">
+            <h2>ANGLO</h2>
+            <span>MIRANTE</span>
+        </div>
 
-  <script src="app.js"></script>
+        <nav>
+
+            <a href="#" class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="#">
+                🎓 Alunos
+            </a>
+
+            <a href="#">
+                📚 Cursos
+            </a>
+
+            <a href="#">
+                👨‍🏫 Professores
+            </a>
+
+            <a href="#">
+                📝 Provas
+            </a>
+
+            <a href="#">
+                🏆 Desempenho
+            </a>
+
+            <a href="#">
+                💬 Mensagens
+            </a>
+
+            <a href="#">
+                ⚙️ Configurações
+            </a>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Dashboard</h1>
+                <p>Bem-vindo ao Anglo Mirante Premium</p>
+            </div>
+
+            <div class="top-actions">
+
+                <button class="action-btn">
+                    🔔
+                </button>
+
+                <button class="action-btn">
+                    ⚡
+                </button>
+
+                <div class="profile">
+
+                    <img src="https://i.pravatar.cc/100">
+
+                    <div>
+                        <h4>Administrador</h4>
+                        <span>Online</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <h2 data-counter="2450">0</h2>
+                <span>Alunos</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="128">0</h2>
+                <span>Professores</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="98">0</h2>
+                <span>% Aprovação</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="52">0</h2>
+                <span>Cursos</span>
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+
+        <section class="content-grid">
+
+            <div class="panel large">
+
+                <div class="panel-header">
+                    <h3>Desempenho Geral</h3>
+                </div>
+
+                <canvas id="performanceChart"></canvas>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <h3>Atividades</h3>
+                </div>
+
+                <ul class="activity-list">
+
+                    <li>✅ Nova matrícula realizada</li>
+                    <li>📚 Curso atualizado</li>
+                    <li>🏆 Aprovação registrada</li>
+                    <li>📝 Prova publicada</li>
+                    <li>👨‍🏫 Novo professor adicionado</li>
+
+                </ul>
+
+            </div>
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <h3>Turmas</h3>
+                </div>
+
+                <div class="progress-item">
+                    <span>3º Ano A</span>
+                    <div class="progress">
+                        <div style="width:92%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <span>3º Ano B</span>
+                    <div class="progress">
+                        <div style="width:85%"></div>
+                    </div>
+                </div>
+
+                <div class="progress-item">
+                    <span>2º Ano</span>
+                    <div class="progress">
+                        <div style="width:76%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="panel large">
+
+                <div class="panel-header">
+                    <h3>Últimos Alunos</h3>
+                </div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Curso</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Lucas Silva</td>
+                            <td>Medicina</td>
+                            <td><span class="badge success">Ativo</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Ana Costa</td>
+                            <td>Direito</td>
+                            <td><span class="badge success">Ativo</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Pedro Lima</td>
+                            <td>Engenharia</td>
+                            <td><span class="badge warning">Pendente</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+
 </body>
-</html>
+</html> 
+<button id="logoutBtn" class="logout-btn">
+    Sair
+</button>
+<a href="dashboard.html" class="menu-item active">
+    📊 Dashboard
+</a>
+
+<a href="alunos.html" class="menu-item">
+    🎓 Alunos
+</a>
+
+<a href="cursos.html" class="menu-item">
+    📚 Cursos
+</a>
+
+<a href="professores.html" class="menu-item">
+    👨‍🏫 Professores
+</a>
+
+<a href="provas.html" class="menu-item">
+    📝 Provas
+</a>
+
+<a href="desempenho.html" class="menu-item">
+    🏆 Desempenho
+</a>
+
+<a href="mensagens.html" class="menu-item">
+    💬 Mensagens
+</a>
+
+<a href="configuracoes.html" class="menu-item">
+    ⚙️ Configurações
+</a>
