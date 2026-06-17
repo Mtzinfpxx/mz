@@ -1,39 +1,99 @@
-<h1>Desempenho</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desempenho | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 
-<div class="stats-grid">
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h2>ANGLO</h2>
+                <span>MIRANTE</span>
+            </div>
+        </a>
 
-    <div class="card">
-        <h2>97%</h2>
-        <p>Aprovação</p>
-    </div>
+        <nav aria-label="Menu principal">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="provas.html">Provas</a>
+            <a href="desempenho.html" class="active">Desempenho</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="configuracoes.html">Configurações</a>
+        </nav>
 
-    <div class="card">
-        <h2>94%</h2>
-        <p>Frequência</p>
-    </div>
+        <button id="logoutBtn" class="logout-btn" type="button">Sair</button>
+    </aside>
 
-    <div class="card">
-        <h2>9.1</h2>
-        <p>Média Geral</p>
-    </div>
+    <main>
+        <header class="topbar">
+            <div>
+                <h1>Desempenho</h1>
+                <p>Indicadores de aprovação, frequência e média geral.</p>
+            </div>
 
-</div>
+            <div class="top-actions">
+                <button class="action-btn" type="button" aria-label="Notificações">🔔</button>
+                <button class="action-btn" type="button" aria-label="Ações rápidas">⚡</button>
+            </div>
+        </header>
 
-<div class="card">
-    <canvas id="grafico"></canvas>
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h2 data-counter="97">0</h2>
+                <span>% Aprovação</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="94">0</h2>
+                <span>% Frequência</span>
+            </div>
+
+            <div class="stat-card">
+                <h2>9.1</h2>
+                <span>Média Geral</span>
+            </div>
+        </section>
+
+        <section class="panel large">
+            <div class="panel-header">
+                <h3>Evolução Mensal</h3>
+            </div>
+            <canvas id="grafico"></canvas>
+        </section>
+    </main>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script>
-new Chart(document.getElementById('grafico'),{
-    type:'line',
-    data:{
-        labels:['Jan','Fev','Mar','Abr','Mai','Jun'],
-        datasets:[{
-            label:'Desempenho',
-            data:[78,82,85,89,91,94]
+new Chart(document.getElementById("grafico"), {
+    type: "line",
+    data: {
+        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+        datasets: [{
+            label: "Desempenho",
+            data: [78, 82, 85, 89, 91, 94],
+            borderColor: "#06b6d4",
+            backgroundColor: "rgba(6,182,212,.15)",
+            tension: .4,
+            fill: true
         }]
+    },
+    options: {
+        responsive: true,
+        plugins: { legend: { display: false } }
     }
 });
 </script>
+<script src="dashboard.js"></script>
+</body>
+</html>

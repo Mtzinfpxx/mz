@@ -1,14 +1,67 @@
-<h1>Provas</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Provas | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 
-<div class="card">
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h2>ANGLO</h2>
+                <span>MIRANTE</span>
+            </div>
+        </a>
 
-    <h2>Próximas Avaliações</h2>
+        <nav aria-label="Menu principal">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="provas.html" class="active">Provas</a>
+            <a href="desempenho.html">Desempenho</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="configuracoes.html">Configurações</a>
+        </nav>
 
-    <ul>
-        <li>Matemática - 20/06</li>
-        <li>Física - 22/06</li>
-        <li>Redação - 25/06</li>
-        <li>Biologia - 27/06</li>
-    </ul>
+        <button id="logoutBtn" class="logout-btn" type="button">Sair</button>
+    </aside>
 
+    <main>
+        <header class="topbar">
+            <div>
+                <h1>Provas</h1>
+                <p>Calendário das próximas avaliações.</p>
+            </div>
+
+            <div class="top-actions">
+                <button class="action-btn" type="button" aria-label="Notificações">🔔</button>
+                <button class="action-btn" type="button" aria-label="Ações rápidas">⚡</button>
+            </div>
+        </header>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h3>Próximas Avaliações</h3>
+            </div>
+
+            <ul class="activity-list">
+                <li>Matemática - 20/06</li>
+                <li>Física - 22/06</li>
+                <li>Redação - 25/06</li>
+                <li>Biologia - 27/06</li>
+            </ul>
+        </section>
+    </main>
 </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

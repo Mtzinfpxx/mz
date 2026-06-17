@@ -1,37 +1,104 @@
-<h1>Gestão de Alunos</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alunos | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 
-<div class="stats-grid">
-    <div class="card"><h2>2.450</h2><p>Alunos Ativos</p></div>
-    <div class="card"><h2>97%</h2><p>Frequência Média</p></div>
-    <div class="card"><h2>89%</h2><p>Média Geral</p></div>
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h2>ANGLO</h2>
+                <span>MIRANTE</span>
+            </div>
+        </a>
+
+        <nav aria-label="Menu principal">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alunos.html" class="active">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="provas.html">Provas</a>
+            <a href="desempenho.html">Desempenho</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="configuracoes.html">Configurações</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn" type="button">Sair</button>
+    </aside>
+
+    <main>
+        <header class="topbar">
+            <div>
+                <h1>Alunos</h1>
+                <p>Acompanhe matrículas, turmas e situação acadêmica.</p>
+            </div>
+
+            <div class="top-actions">
+                <button class="action-btn" type="button" aria-label="Notificações">🔔</button>
+                <button class="action-btn" type="button" aria-label="Ações rápidas">⚡</button>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <h2 data-counter="2450">0</h2>
+                <span>Alunos Ativos</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="97">0</h2>
+                <span>% Frequência Média</span>
+            </div>
+
+            <div class="stat-card">
+                <h2 data-counter="89">0</h2>
+                <span>% Média Geral</span>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <h3>Últimos Alunos</h3>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Turma</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lucas Almeida</td>
+                        <td>3º Ano A</td>
+                        <td><span class="badge success">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>Mariana Costa</td>
+                        <td>2º Ano B</td>
+                        <td><span class="badge success">Ativo</span></td>
+                    </tr>
+                    <tr>
+                        <td>Pedro Henrique</td>
+                        <td>1º Ano A</td>
+                        <td><span class="badge success">Ativo</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
 </div>
 
-<div class="card">
-    <h2>Últimos Alunos</h2>
-
-    <table>
-        <tr>
-            <th>Nome</th>
-            <th>Turma</th>
-            <th>Status</th>
-        </tr>
-
-        <tr>
-            <td>Lucas Almeida</td>
-            <td>3º Ano A</td>
-            <td>Ativo</td>
-        </tr>
-
-        <tr>
-            <td>Mariana Costa</td>
-            <td>2º Ano B</td>
-            <td>Ativo</td>
-        </tr>
-
-        <tr>
-            <td>Pedro Henrique</td>
-            <td>1º Ano A</td>
-            <td>Ativo</td>
-        </tr>
-    </table>
-</div>
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -467,7 +467,7 @@ document.getElementById("logoutBtn").addEventListener("click", () => {
     localStorage.removeItem("user");
 
     // Volta para a página de login
-    window.location.href = "login.html";
+    window.location.href = "index.html";
 });
 const dashboardStats = {
   alunos: 2847,

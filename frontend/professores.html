@@ -1,23 +1,74 @@
-<h1>Professores</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professores | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 
-<div class="cards-grid">
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h2>ANGLO</h2>
+                <span>MIRANTE</span>
+            </div>
+        </a>
 
-    <div class="card">
-        <h2>Carlos Silva</h2>
-        <p>Matemática</p>
-        <p>⭐ 4.9</p>
-    </div>
+        <nav aria-label="Menu principal">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html" class="active">Professores</a>
+            <a href="provas.html">Provas</a>
+            <a href="desempenho.html">Desempenho</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="configuracoes.html">Configurações</a>
+        </nav>
 
-    <div class="card">
-        <h2>Fernanda Souza</h2>
-        <p>Português</p>
-        <p>⭐ 4.8</p>
-    </div>
+        <button id="logoutBtn" class="logout-btn" type="button">Sair</button>
+    </aside>
 
-    <div class="card">
-        <h2>Ricardo Gomes</h2>
-        <p>Física</p>
-        <p>⭐ 5.0</p>
-    </div>
+    <main>
+        <header class="topbar">
+            <div>
+                <h1>Professores</h1>
+                <p>Equipe pedagógica e disciplinas principais.</p>
+            </div>
 
+            <div class="top-actions">
+                <button class="action-btn" type="button" aria-label="Notificações">🔔</button>
+                <button class="action-btn" type="button" aria-label="Ações rápidas">⚡</button>
+            </div>
+        </header>
+
+        <section class="cards-grid">
+            <article class="card">
+                <h2>Carlos Silva</h2>
+                <p>Matemática</p>
+                <span class="badge success">Avaliação 4.9</span>
+            </article>
+
+            <article class="card">
+                <h2>Fernanda Souza</h2>
+                <p>Português</p>
+                <span class="badge success">Avaliação 4.8</span>
+            </article>
+
+            <article class="card">
+                <h2>Ricardo Gomes</h2>
+                <p>Física</p>
+                <span class="badge success">Avaliação 5.0</span>
+            </article>
+        </section>
+    </main>
 </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

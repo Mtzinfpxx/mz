@@ -1,17 +1,68 @@
-<h1>Configurações</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configurações | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
 
-<div class="card">
+<body>
+<div class="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h2>ANGLO</h2>
+                <span>MIRANTE</span>
+            </div>
+        </a>
 
-    <label>Nome da Instituição</label>
-    <input type="text" value="Anglo Mirante Premium">
+        <nav aria-label="Menu principal">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="alunos.html">Alunos</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="provas.html">Provas</a>
+            <a href="desempenho.html">Desempenho</a>
+            <a href="mensagens.html">Mensagens</a>
+            <a href="configuracoes.html" class="active">Configurações</a>
+        </nav>
 
-    <br><br>
+        <button id="logoutBtn" class="logout-btn" type="button">Sair</button>
+    </aside>
 
-    <label>Email</label>
-    <input type="email" value="contato@anglomirante.com">
+    <main>
+        <header class="topbar">
+            <div>
+                <h1>Configurações</h1>
+                <p>Dados básicos da instituição.</p>
+            </div>
 
-    <br><br>
+            <div class="top-actions">
+                <button class="action-btn" type="button" aria-label="Notificações">🔔</button>
+                <button class="action-btn" type="button" aria-label="Ações rápidas">⚡</button>
+            </div>
+        </header>
 
-    <button>Salvar Alterações</button>
+        <section class="panel settings-panel">
+            <div class="panel-header">
+                <h3>Instituição</h3>
+            </div>
 
+            <label for="schoolName">Nome da Instituição</label>
+            <input id="schoolName" type="text" value="Anglo Mirante Premium">
+
+            <label for="schoolEmail">Email</label>
+            <input id="schoolEmail" type="email" value="contato@anglomirante.com">
+
+            <button type="button">Salvar Alterações</button>
+        </section>
+    </main>
 </div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>
