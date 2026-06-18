@@ -460,15 +460,6 @@ document.addEventListener(
 
   }
 );
-document.getElementById("logoutBtn").addEventListener("click", () => {
-
-    // Remove dados da sessão
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-
-    // Volta para a página de login
-    window.location.href = "index.html";
-});
 const dashboardStats = {
   alunos: 2847,
   professores: 126,

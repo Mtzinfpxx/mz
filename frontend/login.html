@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login com Gmail | Anglo Mirante</title>
+<link rel="stylesheet" href="dashboard.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="login-page">
+<main class="login-shell">
+    <section class="login-panel">
+        <a class="login-brand" href="index.html" aria-label="Voltar para a página inicial">
+            <img src="assets/logo.jpg" alt="Anglo Mirante">
+            <div>
+                <h1>Anglo Mirante</h1>
+                <span>Acesso com Gmail</span>
+            </div>
+        </a>
+
+        <button id="googleLoginBtn" class="google-login-btn" type="button">
+            <span>G</span>
+            Entrar com Gmail
+        </button>
+
+        <p id="loginMessage" class="login-message" aria-live="polite"></p>
+
+        <div class="login-hints">
+            <strong>Redirecionamento</strong>
+            <span>Após entrar, cada Gmail pode ser enviado para uma página própria pelo arquivo firebase-config.js.</span>
+        </div>
+    </section>
+</main>
+
+<script type="module" src="auth.js"></script>
+</body>
+</html>
